@@ -23,17 +23,25 @@ document.addEventListener("DOMContentLoaded", function(){
     // agregamos seccion de condicion para error si no ingresan valores en los campos
       if (nombre === '' || apellido === '' || email === '' || password1 === '' || password2 === '' || !terminos) {
         showAlertError();
+        setTimeout(function () {
+            location.reload();}, 3000);
         return;
       }
     
     // condicion para que la contraseña sea mayor a 6 caracteres y sea igual password1 y 2
       if (password1.length < 6 || password1 !== password2) {
         showAlertError();
+        setTimeout(function () {
+            location.reload();}, 3000);
         return;
       } else {
           showAlertSuccess();  // muestra validacion correcta si se cumple todo
+          setTimeout(function () {
+            location.reload();}, 3000);
       }
     }
+
+
 })
 
     
